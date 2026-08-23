@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9 Foundation | Spark Science Foundation</title>
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <meta name="description" content="Class 9 Science Coaching for CBSE and ICSE at Spark Science Foundation, Bangalore." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* CORE STYLES */
+    :root {
+      --navy:#0b2545; --navy-2:#13315c; --ink:#14213d;
+      --gold:#c9a227; --gold-soft:#e6c34a;
+      --ivory:#faf7f1; --paper:#fff;
+      --line:#e7ddc9; --line-2:#ebe6da;
+      --text:#1a2438; --muted:#5b6478;
+      --green:#25d366; --green-2:#1ebe5d;
+      --r-sm:8px; --r-md:14px; --r-lg:22px; --r-xl:32px;
+      --shadow-sm:0 1px 2px rgba(11,37,69,.06),0 2px 6px rgba(11,37,69,.05);
+      --shadow-md:0 8px 28px rgba(11,37,69,.10);
+      --t:.32s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.12;color:var(--ink);font-variation-settings:'opsz' 96}
+    h1{font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.02em}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+    h3{font-size:1.18rem}
+    p{color:var(--muted);font-size:1rem}
+    a{text-decoration:none;color:inherit}
+    .container{width:100%;max-width:1180px;margin-inline:auto;padding-inline:22px}
+
+    /* NAV & BUTTONS */
+    .topbar{background:var(--navy);color:rgba(255,255,255,.86);font-size:.82rem;padding:9px 0}
+    .topbar-inner{display:flex;align-items:center;gap:10px;justify-content:center}
+    .topbar-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 4px rgba(201,162,39,.18)}
+    
+    .nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2);box-shadow:0 2px 18px rgba(11,37,69,.06);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:16px}
+    .nav-logo{display:flex;align-items:center;gap:12px}
+    
+    /* LOGO CSS */
+    .nav-logo-mark{width:48px;height:48px;background:#fff;border-radius:8px;display:grid;place-items:center;box-shadow:0 4px 12px rgba(11,37,69,.15);overflow:hidden;}
+    .nav-logo-mark img{width:100%;height:100%;object-fit:contain;}
+    
+    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1}
+    .logo-line1{font-family:'Fraunces',serif;font-size:1.06rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+    .logo-line2{font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:1px}
+    .nav-links{display:none;align-items:center;gap:26px}
+    .nav-links a{font-size:.92rem;font-weight:500;color:var(--text);position:relative;transition:color var(--t)}
+    .nav-links a:hover{color:var(--navy)}
+    @media(min-width:900px){.nav-links{display:flex}}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;border-radius:999px;border:none;cursor:pointer;transition:transform var(--t),box-shadow var(--t),background var(--t);white-space:nowrap}
+    .btn-primary{background:var(--ink);color:var(--ivory);box-shadow:0 4px 14px rgba(11,37,69,.18)}
+    .btn-primary:hover{background:#0a1a30;box-shadow:0 8px 24px rgba(11,37,69,.28);transform:translateY(-1px)}
+
+    /* INNER PAGE HERO */
+    /* BACK BUTTON */
+    .back-to-home { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; transition: all var(--t); border: 1px solid rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 999px; background: rgba(255,255,255,0.05); }
+    .back-to-home:hover { color: var(--gold-soft); border-color: rgba(230, 195, 74, 0.4); background: rgba(255,255,255,0.1); transform: translateX(-4px); }
+    .page-hero{background:linear-gradient(170deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding-block:80px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before {content:''; position:absolute; inset:0; background: radial-gradient(circle at 50% -20%, rgba(201,162,39,0.15), transparent 60%); pointer-events: none;}
+    .page-hero h1{color:#fff;margin-bottom:16px;}
+    .page-hero p{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:600px;margin:0 auto;}
+
+    /* TABS SECTION */
+    .curriculum-section { padding-block: 80px; background: var(--paper); }
+    .tabs-header { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; border-bottom: 2px solid var(--line); margin-bottom: 40px; padding-bottom: 2px; }
+    .tab-btn { background: none; border: none; padding: 12px 28px; font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color var(--t), border-color var(--t); }
+    .tab-btn:hover { color: var(--ink); }
+    .tab-btn.active { color: var(--ink); border-color: var(--gold); }
+    
+    .tab-content { display: none; animation: fadeIn 0.4s ease; max-width: 900px; margin: 0 auto; background: var(--ivory); padding: 40px; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .tab-content h3 { color: var(--ink); margin-bottom: 16px; font-size: 1.5rem; }
+    .tab-content p { margin-bottom: 30px; line-height: 1.7; }
+    
+    /* SYLLABUS GRID INSIDE TABS */
+    .syllabus-grid { display: grid; gap: 24px; }
+    @media(min-width: 640px) { .syllabus-grid { grid-template-columns: 1fr 1fr; } }
+    .syllabus-box { background: #fff; padding: 24px; border-radius: var(--r-md); border: 1px solid var(--line-2); }
+    .syllabus-box h4 { color: var(--gold); font-family: 'Inter', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .tab-list { list-style: none; }
+    .tab-list li { position: relative; padding: 6px 0 6px 20px; font-size: 0.95rem; color: var(--text); border-bottom: 1px solid var(--line-2); }
+    .tab-list li:last-child { border-bottom: none; }
+    .tab-list li::before { content:''; position:absolute; left:0; top:14px; width:10px; height:2px; background: var(--gold); border-radius: 2px; }
+
+    /* NOTES GRID INSIDE TABS */
+    .notes-grid { display: grid; gap: 16px; margin-top: 24px; }
+    @media(min-width: 600px){.notes-grid{grid-template-columns: repeat(2, 1fr);}}
+    @media(min-width: 900px){.notes-grid{grid-template-columns: repeat(3, 1fr);}}
+    
+    .note-card { display: flex; align-items: center; gap: 16px; padding: 18px; border: 1px solid var(--line); border-radius: var(--r-md); transition: all var(--t); background: #fff; box-shadow: var(--shadow-sm); }
+    .note-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .note-icon { width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .note-icon.pdf { background: rgba(220, 39, 67, 0.1); color: #dc2743; }
+    .note-icon.doc { background: rgba(37, 211, 102, 0.1); color: #25d366; }
+    .note-info h4 { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--ink); margin-bottom: 2px; }
+    .note-info p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+    .note-download { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; background: var(--paper); border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink); font-weight: bold; transition: all var(--t); flex-shrink: 0;}
+    .note-card:hover .note-download { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+    .cta-area { text-align: center; padding-top: 60px; }
+    
+    /* FOOTER */
+    .footer{background:var(--ink);color:#fff;padding-block:56px 24px; margin-top: 60px;}
+    .footer-inner{display:grid;gap:28px;margin-bottom:36px;align-items:start}
+    @media(min-width:720px){.footer-inner{grid-template-columns:1.4fr 1fr 1fr;gap:40px}}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;margin-bottom:8px}
+    .footer-logo span{color:var(--gold-soft)}
+    .footer p{color:rgba(255,255,255,.55);font-size:.92rem;max-width:380px;margin-bottom:16px}
+    .footer-col h4{font-family:'Inter',sans-serif;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+    .footer-links{display:flex;flex-direction:column;gap:10px}
+    .footer-links a{color:rgba(255,255,255,.7);font-size:.92rem;transition:color var(--t)}
+    .footer-links a:hover{color:var(--gold-soft)}
+    .footer-bottom{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:.82rem}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="logo.jpg" alt="Spark Science Foundation Logo" />
+      </div>
+      <div class="nav-logo-text">
+        <span class="logo-line1">Spark Science</span>
+        <span class="logo-line2">Foundation</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">Courses</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+    <h1>Class 9 Foundation</h1>
+    <p>Deep dive into conceptual science to set the perfect framework for Class 10 Board exams and beyond.</p>
+  </div>
+</header>
+
+<section class="curriculum-section">
+  <div class="container">
+    <div class="tabs-header">
+      <button class="tab-btn active" onclick="openTab(event, 'cbse')">CBSE Syllabus</button>
+      <button class="tab-btn" onclick="openTab(event, 'icse')">ICSE Syllabus</button>
+    </div>
+
+    <div id="cbse" class="tab-content active">
+      <h3>CBSE Track Breakdown</h3>
+      <p>Our Class 9 CBSE curriculum meticulously follows NCERT guidelines while diving deeper into the "why" behind the formulas. We prepare students not just for school tests, but build the conceptual framework necessary for Class 10 Boards.</p>
+      
+      <div class="syllabus-grid">
+        <div class="syllabus-box">
+          <h4>Physics (Per Spark Module)</h4>
+          <ul class="tab-list">
+            <li>Motion (Speed, Velocity, Acceleration)</li>
+            <li>Force & Newton's Laws of Motion</li>
+            <li>Sound & Wave Propagation</li>
+            <li>Work, Power & Energy</li>
+            <li>Simple Machines & Levers</li>
+          </ul>
+        </div>
+        <div class="syllabus-box">
+          <h4>Chemistry & Biology</h4>
+          <ul class="tab-list">
+            <li>Matter in Our Surroundings</li>
+            <li>Structure of the Atom</li>
+            <li>Fundamental Unit of Life (Cell)</li>
+            <li>Tissues & Diversity</li>
+            <li>Daily Practice Problems (D.P.P)</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--line-2); margin: 40px 0;">
+      <h3 style="margin-bottom: 8px;">Free CBSE Demo Notes</h3>
+      <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Download our highly curated, concept-first study materials used by Spark students.</p>
+      
+      <div class="notes-grid">
+        <a href="DEMO_MATERIAL.pdf" target="_blank" class="note-card" style="border-color: var(--gold); box-shadow: var(--shadow-md);">
+          <div class="note-icon pdf">PDF</div>
+          <div class="note-info">
+            <h4>Physics Complete Material</h4>
+            <p>Class 9 CBSE • 69 Pages</p>
+          </div>
+          <div class="note-download" style="background: var(--gold); color: #fff;">↓</div>
+        </a>
+        
+        <a href="class9-cbse-chem.pdf" target="_blank" class="note-card">
+          <div class="note-icon doc">PDF</div>
+          <div class="note-info">
+            <h4>Chemistry: Atoms</h4>
+            <p>Class 9 CBSE • Visual Map</p>
+          </div>
+          <div class="note-download">↓</div>
+        </a>
+      </div>
+    </div>
+
+    <div id="icse" class="tab-content">
+      <h3>ICSE Track Breakdown</h3>
+      <p>The ICSE board demands a rigorous understanding of expansive topics. Our track is tailored to handle the heavier volume of content with an emphasis on precise scientific definitions, complex numericals, and analytical thinking.</p>
+      
+      <div class="syllabus-grid">
+        <div class="syllabus-box">
+          <h4>Physics</h4>
+          <ul class="tab-list">
+            <li>Measurements & Experimentation</li>
+            <li>Motion in One Dimension</li>
+            <li>Laws of Motion & Fluids</li>
+            <li>Heat & Thermodynamics</li>
+            <li>Reflection of Light & Sound</li>
+          </ul>
+        </div>
+        <div class="syllabus-box">
+          <h4>Chemistry</h4>
+          <ul class="tab-list">
+            <li>The Language of Chemistry</li>
+            <li>Chemical Changes & Reactions</li>
+            <li>Water & Atomic Structure</li>
+            <li>The Periodic Table</li>
+            <li>Study of the First Element (Hydrogen)</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--line-2); margin: 40px 0;">
+      <h3 style="margin-bottom: 8px;">Free ICSE Demo Notes</h3>
+      <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Download exclusive ICSE material with advanced numericals and definitions.</p>
+      
+      <div class="notes-grid">
+        <a href="class9-icse-physics.pdf" target="_blank" class="note-card">
+          <div class="note-icon pdf">PDF</div>
+          <div class="note-info">
+            <h4>Physics: Measurements</h4>
+            <p>Class 9 ICSE • Concept Sheet</p>
+          </div>
+          <div class="note-download">↓</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-area">
+      <a href="index.html#contact" class="btn btn-primary">Book a Free Demo Class</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Spark Science <span>Foundation</span></div>
+      <p>Building strong foundations, one student at a time. Padmanabhanagar, Bangalore.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <div class="footer-links">
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Reach us</h4>
+      <div class="footer-links">
+        <a href="tel:+919731385870">+91 97313 85870</a>
+        <a href="https://wa.me/919731385870" target="_blank" rel="noopener">WhatsApp us</a>
+        <a href="https://www.instagram.com/sparksciencefoundation2010" target="_blank" rel="noopener">@sparksciencefoundation2010</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2025 Spark Science Foundation, Bangalore.</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  function openTab(evt, tabId) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].classList.remove("active");
+    }
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
