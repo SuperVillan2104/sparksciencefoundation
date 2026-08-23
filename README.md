@@ -70,14 +70,6 @@ To deploy this project from GitHub:
 
 Every push to the configured branch will trigger a new deployment.
 
-## Contact
-
-- **WhatsApp:** [+91 97313 85870](https://wa.me/919731385870)
-- **Landline:** [080-26394711](tel:08026394711)
-- **Email:** [sparksciencefoundation2010@gmail.com](mailto:sparksciencefoundation2010@gmail.com)
-- **Instagram:** [@sparksciencefoundation2010](https://www.instagram.com/sparksciencefoundation2010)
-- **Address:** No. 169, RK Layout, T. Timmaiah Road, Kidney Foundation Road, Padmanabhanagar, Bangalore 560070
-
 ## License
 
 This repository contains the website and branded educational materials for Spark Science Foundation. Content, images, logos, and PDF resources are intended for the institute's website and should not be reused without permission.
