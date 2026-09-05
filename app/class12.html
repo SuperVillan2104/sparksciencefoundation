@@ -32,24 +32,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- JSON-LD Course Schema -->
+  <!-- JSON-LD Course & Breadcrumb Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Class 12 The Final Leap (CBSE, PUC, JEE/NEET, KCET)",
-    "description": "Strict NCERT and competitive focus with intensive revision cycles, weekly full-length mock exams, and personalized doubt-solving sessions for Class 12 and 2nd PUC.",
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Spark Science Foundation",
-      "sameAs": "https://sparksciencefoundation.netlify.app/"
-    },
-    "educationalCredentialAwarded": "Class 12 / 2nd PUC & KCET Preparation",
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "Offline",
-      "location": "Spark Science Foundation, Padmanabhanagar, Bangalore"
-    }
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Class 12 The Final Leap (CBSE, PUC, JEE/NEET, KCET)",
+        "description": "Strict NCERT and competitive focus with intensive revision cycles, weekly full-length mock exams, and personalized doubt-solving sessions for Class 12 and 2nd PUC.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Spark Science Foundation",
+          "sameAs": "https://sparksciencefoundation.netlify.app/"
+        },
+        "educationalCredentialAwarded": "Class 12 / 2nd PUC & KCET Preparation",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "Offline",
+          "location": "Spark Science Foundation, Padmanabhanagar, Bangalore"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sparksciencefoundation.netlify.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Class 12 & 2nd PUC Coaching",
+            "item": "https://sparksciencefoundation.netlify.app/class12.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 

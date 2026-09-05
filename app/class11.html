@@ -32,24 +32,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- JSON-LD Course Schema -->
+  <!-- JSON-LD Course & Breadcrumb Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Class 11 Advanced Track (CBSE, PUC, JEE/NEET Foundation)",
-    "description": "NCERT mastery with advanced derivations, physics, chemistry, mathematics, and integrated JEE/NEET foundation problem sets.",
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Spark Science Foundation",
-      "sameAs": "https://sparksciencefoundation.netlify.app/"
-    },
-    "educationalCredentialAwarded": "Class 11 / 1st PUC Preparation",
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "Offline",
-      "location": "Spark Science Foundation, Padmanabhanagar, Bangalore"
-    }
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Class 11 Advanced Track (CBSE, PUC, JEE/NEET Foundation)",
+        "description": "NCERT mastery with advanced derivations, physics, chemistry, mathematics, and integrated JEE/NEET foundation problem sets.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Spark Science Foundation",
+          "sameAs": "https://sparksciencefoundation.netlify.app/"
+        },
+        "educationalCredentialAwarded": "Class 11 / 1st PUC Preparation",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "Offline",
+          "location": "Spark Science Foundation, Padmanabhanagar, Bangalore"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sparksciencefoundation.netlify.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Class 11 Advanced Track",
+            "item": "https://sparksciencefoundation.netlify.app/class11.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
