@@ -29,12 +29,20 @@ Official website for **Spark Science Foundation**, a concept-first science coach
     ├── Farewell.jpg
     ├── Farewell 1.jpg
     ├── Saraswathi pooja.jpg
+    ├── Teachersday 1.jpeg
+    ├── Teachersday2.jpeg
+    ├── Teachersday3.jpeg
+    ├── Teachersday4.jpeg
+    ├── Teachersday5.jpeg
+    ├── Teachersday6.jpeg
     ├── Test 1.jpg
     ├── Test 2.jpg
+    ├── Atoms second PUC.pdf
     ├── DEMO_MATERIAL.pdf
     ├── class11-kinetic.pdf
     ├── class11-syllabus.pdf
-    └── class11-thermodynamics.pdf
+    ├── class11-thermodynamics.pdf
+    └── straight lines.pdf
 ```
 
 ## Technology
