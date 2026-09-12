@@ -1,9 +1,15 @@
 [build]
   publish = "app"
 
-# Redirect default Netlify subdomain to custom domain
+# Redirect default Netlify subdomain to custom apex domain
 [[redirects]]
   from = "https://sparksciencefoundation.netlify.app/*"
+  to = "https://sparksciencefoundation.in/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://sparksciencefoundation.netlify.app/*"
   to = "https://sparksciencefoundation.in/:splat"
   status = 301
   force = true
@@ -11,6 +17,12 @@
 # Redirect www to apex domain
 [[redirects]]
   from = "https://www.sparksciencefoundation.in/*"
+  to = "https://sparksciencefoundation.in/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.sparksciencefoundation.in/*"
   to = "https://sparksciencefoundation.in/:splat"
   status = 301
   force = true

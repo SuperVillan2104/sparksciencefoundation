@@ -1,0 +1,7 @@
+# Force 301 Permanent Redirects from Netlify default subdomain to Custom Apex Domain
+https://sparksciencefoundation.netlify.app/* https://sparksciencefoundation.in/:splat 301!
+http://sparksciencefoundation.netlify.app/* https://sparksciencefoundation.in/:splat 301!
+
+# Force 301 Permanent Redirects from WWW to Apex
+https://www.sparksciencefoundation.in/* https://sparksciencefoundation.in/:splat 301!
+http://www.sparksciencefoundation.in/* https://sparksciencefoundation.in/:splat 301!
