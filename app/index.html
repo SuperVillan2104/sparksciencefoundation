@@ -225,7 +225,9 @@
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100vw;
     }
 
     body {
@@ -234,7 +236,10 @@
       background: var(--paper);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
 
     h1,
@@ -1516,26 +1521,37 @@
 
     /* Contact */
     .contact {
-      background: #fff
+      background: #fff;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     .contact-grid {
       display: grid;
-      gap: 36px
+      gap: 36px;
+      width: 100%;
+      min-width: 0;
     }
 
     @media(min-width:880px) {
       .contact-grid {
         grid-template-columns: 1fr 1.1fr;
-        gap: 48px
+        gap: 48px;
       }
+    }
+
+    .contact-info {
+      width: 100%;
+      min-width: 0;
     }
 
     .info-item {
       display: flex;
       gap: 14px;
       margin-bottom: 22px;
-      align-items: flex-start
+      align-items: flex-start;
+      width: 100%;
+      min-width: 0;
     }
 
     .info-icon {
@@ -1546,17 +1562,17 @@
       border-radius: 11px;
       display: grid;
       place-items: center;
-      flex-shrink: 0
+      flex-shrink: 0;
     }
 
     .info-icon.insta {
       background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      color: #fff
+      color: #fff;
     }
 
     .info-icon svg {
       width: 20px;
-      height: 20px
+      height: 20px;
     }
 
     .info-label {
@@ -1565,23 +1581,29 @@
       color: var(--gold);
       text-transform: uppercase;
       letter-spacing: .12em;
-      margin-bottom: 4px
+      margin-bottom: 4px;
     }
 
     .info-value {
       font-size: .98rem;
       color: var(--ink);
-      line-height: 1.55
+      line-height: 1.55;
+      min-width: 0;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
     .info-value a {
       color: var(--ink);
       transition: color var(--t);
       display: inline-block;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      max-width: 100%;
     }
 
     .info-value a:hover {
-      color: var(--gold)
+      color: var(--gold);
     }
 
     /* Map (clickable overlay) */
@@ -1591,7 +1613,9 @@
       border-radius: var(--r-md);
       overflow: hidden;
       border: 1px solid var(--line);
-      box-shadow: var(--shadow-sm)
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+      max-width: 100%;
     }
 
     .map-frame iframe {
@@ -1599,7 +1623,7 @@
       height: 240px;
       border: none;
       display: block;
-      pointer-events: none
+      pointer-events: none;
     }
 
     .map-overlay {
@@ -1609,11 +1633,11 @@
       z-index: 2;
       background: transparent;
       cursor: pointer;
-      transition: background var(--t)
+      transition: background var(--t);
     }
 
     .map-overlay:hover {
-      background: rgba(11, 37, 69, .04)
+      background: rgba(11, 37, 69, .04);
     }
 
     .map-overlay::after {
@@ -1630,12 +1654,12 @@
       box-shadow: var(--shadow-md);
       opacity: 0;
       transform: translateY(6px);
-      transition: all var(--t)
+      transition: all var(--t);
     }
 
     .map-overlay:hover::after {
       opacity: 1;
-      transform: translateY(0)
+      transform: translateY(0);
     }
 
     .contact-form {
@@ -1643,35 +1667,44 @@
       border: 1px solid var(--line);
       border-radius: var(--r-lg);
       padding: 32px 30px;
-      box-shadow: var(--shadow-sm)
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    @media(max-width:600px) {
+      .contact-form {
+        padding: 24px 18px;
+      }
     }
 
     .form-card-head {
       margin-bottom: 22px;
       padding-bottom: 18px;
-      border-bottom: 1px solid var(--line-2)
+      border-bottom: 1px solid var(--line-2);
     }
 
     .form-card-head h3 {
       color: var(--ink);
       font-size: 1.4rem;
-      margin-bottom: 6px
+      margin-bottom: 6px;
     }
 
     .form-card-head p {
       font-size: .9rem;
-      color: var(--muted)
+      color: var(--muted);
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px
+      gap: 14px;
     }
 
-    @media(max-width:480px) {
+    @media(max-width:580px) {
       .form-row {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
     }
 
