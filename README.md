@@ -2,7 +2,7 @@
 
 Official website for **Spark Science Foundation**, a concept-first science coaching institute in Padmanabhanagar, Bangalore. The website helps students and parents explore academic programs for Classes 9, 10, 11, and 12, review learning resources, and contact the institute for admissions or a demo class.
 
-**Live website:** [sparksciencefoundation.netlify.app](https://sparksciencefoundation.netlify.app/)
+**Live website:** [sparksciencefoundation.in](https://sparksciencefoundation.in/)
 
 ## Highlights
 

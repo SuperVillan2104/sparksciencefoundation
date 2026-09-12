@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sparksciencefoundation.netlify.app/sitemap.xml
+Sitemap: https://sparksciencefoundation.in/sitemap.xml
