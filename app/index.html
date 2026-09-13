@@ -6,7 +6,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spark Science Foundation – Expert Science Coaching in Padmanabhanagar, Bangalore</title>
-  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  
+  <!-- Favicons & Icons for Google Search, Mobile, and Desktop Browsers -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <meta name="application-name" content="Spark Science Foundation" />
+  <meta name="apple-mobile-web-app-title" content="Spark Science Foundation" />
   <meta name="description"
     content="Top-rated science coaching for Class 9, 10, 11 & 12 (CBSE, ICSE, PUC, KCET, JEE/NEET Foundation) in Padmanabhanagar, Bangalore. Small batches, concept-first teaching & individual attention." />
   <meta name="keywords"
@@ -24,11 +34,11 @@
   <!-- Open Graph / WhatsApp / Facebook Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sparksciencefoundation.in/" />
+  <meta property="og:site_name" content="Spark Science Foundation" />
   <meta property="og:title" content="Spark Science Foundation – Expert Science Coaching in Bangalore" />
   <meta property="og:description"
     content="Top science tuition in Padmanabhanagar, Bangalore for Class 9, 10, 11 & 12 (CBSE, ICSE, PUC, KCET, JEE/NEET Foundation). Max 25 students per batch." />
-  <meta property="og:image" content="https://sparksciencefoundation.in/logo.jpg" />
-  <meta property="og:site_name" content="Spark Science Foundation" />
+  <meta property="og:image" content="https://sparksciencefoundation.in/favicon-512x512.png" />
   <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter Meta Tags -->
@@ -37,7 +47,7 @@
   <meta name="twitter:title" content="Spark Science Foundation – Expert Science Coaching in Bangalore" />
   <meta name="twitter:description"
     content="Concept-first science coaching for Class 9, 10, 11 & 12 in Padmanabhanagar, Bangalore. Max 25 students per batch." />
-  <meta name="twitter:image" content="https://sparksciencefoundation.in/logo.jpg" />
+  <meta name="twitter:image" content="https://sparksciencefoundation.in/favicon-512x512.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,18 +56,37 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
-  <!-- JSON-LD Structured Data Schema for Local Business, Educational Organization & Parent FAQs -->
+  <!-- JSON-LD Structured Data Schema for Local Business, Educational Organization, WebSite & Parent FAQs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sparksciencefoundation.in/#website",
+        "url": "https://sparksciencefoundation.in/",
+        "name": "Spark Science Foundation",
+        "alternateName": [
+          "Spark Science Foundation Bangalore",
+          "Spark Science",
+          "SSF"
+        ],
+        "publisher": {
+          "@id": "https://sparksciencefoundation.in/#organization"
+        }
+      },
       {
         "@type": ["EducationalOrganization", "LocalBusiness"],
         "@id": "https://sparksciencefoundation.in/#organization",
         "name": "Spark Science Foundation",
         "alternateName": "Spark Science Foundation Bangalore",
         "url": "https://sparksciencefoundation.in/",
-        "logo": "https://sparksciencefoundation.in/logo.jpg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sparksciencefoundation.in/favicon-512x512.png",
+          "width": 512,
+          "height": 512
+        },
         "image": "https://sparksciencefoundation.in/logo.jpg",
         "description": "Concept-first Science Coaching Institute in Padmanabhanagar, Bangalore for Class 9, 10, 11, and 12 (CBSE, ICSE, PUC, KCET, JEE/NEET Foundation).",
         "telephone": ["+919731385870", "+919008575870", "08026394711"],
